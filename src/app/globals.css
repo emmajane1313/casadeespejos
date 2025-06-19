@@ -1,26 +1,149 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Broken Mirror";
+  font-weight: 400;
+  src: url("/fonts/BrokenMirror.ttf");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Maskdown";
+  font-weight: 400;
+  src: url("/fonts/Maskdown.otf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: "Mare";
+  font-weight: 400;
+  src: url("/fonts/Mare.otf");
+}
+
+@font-face {
+  font-family: "Crush Metal";
+  font-weight: 400;
+  src: url("/fonts/CrushMetal.ttf");
+}
+
+@font-face {
+  font-family: "Casa";
+  font-weight: 400;
+  src: url("/fonts/casa.ttf");
+}
+
+@font-face {
+  font-family: "Seven";
+  font-weight: 400;
+  src: url("/fonts/seven.ttf");
+}
+
+@theme {
+  --font-crush: "Crush Metal";
+  --font-broken: "Broken Mirror";
+  --font-casa: "Casa";
+  --font-seven: "Seven";
+  --font-mask: "Maskdown";
+  --font-mare: "Mare";
+
+  --color-verde: #38f2a3;
+  --color-cast: #00fc6d;
+  --color-cesped: #38f2a3;
+  --color-frio: #0a2601;
+
+  --breakpoint-galaxy: 30rem;
+}
+
+@layer utilities {
+  .font-broken {
+    font-family: var(--font-broken);
+  }
+  .font-crush {
+    font-family: var(--font-crush);
+  }
+  .font-casa {
+    font-family: var(--font-casa);
+  }
+  .font-seven {
+    font-family: var(--font-seven);
+  }
+  .font-mask {
+    font-family: var(--font-mask);
+  }
+  .font-mare {
+    font-family: var(--font-mare);
   }
 }
 
+html {
+  background: black;
+}
+
+.text {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  line-height: 0.9;
+  transform: scaleX(1.2);
+}
+
+.stack {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #0ec050;
+  display: flex;
+  flex-direction: column;
+}
+
+.clip {
+  overflow: hidden;
+  height: 0.54em;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  scrollbar-width: 0px;
+  scrollbar-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar-track:active {
+  background-color: transparent !important;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background-color: transparent !important;
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar-track:active {
+  background-color: transparent !important;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar-thumb:active {
+  background-color: transparent !important;
 }
