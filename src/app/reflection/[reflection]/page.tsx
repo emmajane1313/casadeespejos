@@ -47,7 +47,7 @@ export default async function Reflection({
     <ReflectionEntry
       dict={dict}
       lang={"en"}
-      title={decodeURIComponent(reflection)}
+      title={reflection?.replaceAll("_", " ")}
     />
   );
 }
