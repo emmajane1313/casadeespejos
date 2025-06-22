@@ -105,6 +105,7 @@ export default function RootLayout({
           loop
           className="absolute top-0 left-0 w-full h-full object-cover"
           draggable={false}
+          poster="/images/emmajanemackinnonlee_poster.png"
         >
           <source src="/videos/timeline.mp4" />
         </video>
