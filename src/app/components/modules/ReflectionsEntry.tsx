@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 
 function splitIntoChunks<T>(arr: T[], chunks: number): T[][] {
   const result: T[][] = Array.from({ length: chunks }, () => []);
-  arr.forEach((item, index) => {
+  arr.sort(() => Math.random() - 0.5).forEach((item, index) => {
     result[index % chunks].push(item);
   });
   return result;
@@ -84,6 +84,7 @@ export default function ReflectionsEntry({
     return () => clearTimeout(timeout);
   }, []);
 
+
   return (
     <div className="relative w-full h-full min-h-screen items-center justify-center flex text-white flex bg-gradient-to-b from-frio/80 to-black/80">
       <Header lang={lang} dict={dict} routerPath={"/"} />
@@ -95,6 +96,7 @@ export default function ReflectionsEntry({
             className="relative flex-1 w-fit justify-center overflow-y-scroll"
           >
             {split.map((ref, indice) => (
+              
               <div
                 key={indice}
                 className="group flex w-fit h-fit relative items-center justify-center cursor-pointer p-10 bg-black rounded-full"
