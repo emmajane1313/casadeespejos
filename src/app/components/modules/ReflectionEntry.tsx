@@ -2,7 +2,12 @@
 
 import { ARTICULOS } from "@/app/lib/constantes";
 import Header from "./Header";
-import { IoLogoFlickr, IoLogoMedium, IoLogoTwitter } from "react-icons/io5";
+import {
+  IoLogoFlickr,
+  IoLogoMedium,
+  IoLogoTwitter,
+  IoLogoYoutube,
+} from "react-icons/io5";
 
 export default function ReflectionEntry({
   dict,
@@ -38,6 +43,12 @@ export default function ReflectionEntry({
           size={15}
           className="cursor-pointer"
           onClick={() => window.open("https://twitter.com/casadeespejos")}
+        />
+        <IoLogoYoutube
+          color="white"
+          size={15}
+          className="cursor-pointer"
+          onClick={() => window.open("https://www.youtube.com/@noisemachine13")}
         />
         <IoLogoFlickr
           color="white"
