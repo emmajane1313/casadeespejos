@@ -38,12 +38,6 @@ export default function ReflectionEntry({
           className="cursor-pointer"
           onClick={() => window.open("https://medium.com/@casadeespejos")}
         />
-        <IoLogoTwitter
-          color="white"
-          size={15}
-          className="cursor-pointer"
-          onClick={() => window.open("https://twitter.com/casadeespejos")}
-        />
         <IoLogoYoutube
           color="white"
           size={15}
