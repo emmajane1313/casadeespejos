@@ -5,7 +5,6 @@ import Header from "./Header";
 import {
   IoLogoFlickr,
   IoLogoMedium,
-  IoLogoTwitter,
   IoLogoYoutube,
 } from "react-icons/io5";
 
